@@ -117,22 +117,6 @@ function LeftMenuLinkContainer({ plugins, ...rest }) {
   return (
     <Wrapper>
       {linkSections}
-      <div>
-        <p className="title">
-          <FormattedMessage {...messages.plugins} />
-        </p>
-        <ul className="list">{pluginsLinks}</ul>
-      </div>
-      <div>
-        <p className="title">
-          <FormattedMessage {...messages.general} />
-        </p>
-        <ul className="list">
-          {staticLinks.map(link => (
-            <LeftMenuLink {...rest} key={link.destination} {...link} />
-          ))}
-        </ul>
-      </div>
     </Wrapper>
   );
 }
